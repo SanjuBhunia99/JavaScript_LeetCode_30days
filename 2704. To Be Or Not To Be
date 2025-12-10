@@ -1,0 +1,12 @@
+var expect = function(val) {
+    return {
+        toBe: function(another) {
+            if (val === another) return true;
+            else throw new Error('Not Equal');
+        },
+        notToBe: function(another) {
+            if (val !== another) return true;
+            else throw new Error('Equal');
+        }
+    }
+};
